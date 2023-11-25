@@ -1,0 +1,23 @@
+.logo {
+  text-decoration: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  &__img {
+    display: block;
+  }
+
+  &__content {
+    font-size: 15px;
+  }
+
+  &__title {
+    display: block;
+    font-size: 24px;
+    color: var(--accent-color);
+    font-family: var(--heading-font-family);
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+}

@@ -1,1 +1,33 @@
-.header {}
+@import '../../styles/mixins';
+
+.header {
+  &__wrap {
+    max-width: 1920px;
+    margin-inline: auto;
+    padding: 24px var(--padding-gap);
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    gap: var(--padding-gap);
+  }
+
+  &__logo {
+    flex: none;
+    min-inline-size: 275px;
+    max-inline-size: 275px;
+  }
+
+  &__menu {
+    flex: auto;
+  }
+
+  &__panel {
+    margin-inline-start: auto;
+    flex: none;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}

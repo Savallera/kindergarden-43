@@ -1,7 +1,6 @@
-### Сборка для разработки сайтов
-## Gulp + Webpack
-Обновлено ноя.2023г.
+### Сайт детского садика №43
 
+ссылка на Фигму https://www.figma.com/file/qYElXx1LGAdcX9S7jfgVFL/%D0%94%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B9-%D1%81%D0%B0%D0%B4%D0%B8%D0%BA-43?type=design&node-id=0%3A1&mode=design&t=NEHY30OKJqRn0j44-1
 Команды
 
 ```
@@ -21,9 +20,3 @@ npm init
 Форматирование
 
 `npm run fixAll`
-
----
-
-**Пакеты для установки**
-
-npm i -D @babel/core @babel/preset-env babel gh-pages browser-sync del gulp gulp-autoprefixer gulp-avif gulp-babel gulp-concat gulp-cssimport gulp-file-include gulp-fonter gulp-imagemin gulp-newer gulp-notify gulp-plumber gulp-sass gulp-svg-sprite gulp-ttf2woff2 gulp-uglify gulp-webp sass webpack-stream webpack

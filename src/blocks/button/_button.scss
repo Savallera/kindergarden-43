@@ -1,0 +1,47 @@
+.button {
+  display: block;
+  appearance: none;
+  text-decoration: none;
+  border: 1px solid transparent;
+  min-block-size: 44px;
+  min-inline-size: 200px;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: inherit;
+  font-weight: 600;
+  background-color: transparent;
+  border-radius: 22px;
+  transition:
+    background-color 0.3s ease-in,
+    color 0.3s ease-in,
+    border-color 0.3s ease-in;
+  cursor: pointer;
+
+  &__text {
+    color: inherit;
+  }
+
+  // &:hover {}
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--main-text-color);
+  }
+
+  &_theme_accent {
+    background-color: var(--accent-color);
+    color: rgba(255, 255, 255, 0.95);
+    border-color: currentColor;
+
+    &:hover {
+      background-color: var(--local-pink-color);
+    }
+  }
+}

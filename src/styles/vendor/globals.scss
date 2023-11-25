@@ -8,9 +8,9 @@ body {
   min-inline-size: 320px;
   margin: 0;
   font-family: var(--main-font-family, sans-serif);
+  font-variation-settings: 'wght' var(--main-font-weight, 500);
   font-size: 16px;
   color: var(--main-text-color);
-  background-color: var(--main-bg-color, #f0f0f0);
   scroll-behavior: smooth;
 }
 
@@ -30,6 +30,7 @@ body {
 //   list-style: none;
 // }
 
+menu,
 picture {
   margin: 0;
   padding: 0;
@@ -41,4 +42,14 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }

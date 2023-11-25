@@ -1,9 +1,26 @@
 :root {
-  --main-color: #0086ff;
-  --main-text-color: #3b3b3b;
-  --main-bg-color: #f0f0f0;
-  --accent-color: #ef485f;
+  --main-color: rgb(50, 97, 143);
+  --accent-color: rgb(245, 123, 31);
 
-  --main-font-family: 'Autumn Sweater', sans-serif;
-  --main-gap: clamp(20px, 4vi, 40px);
+  --grey-100-color: rgb(224, 230, 235);
+  --grey-200-color: rgb(191, 202, 212);
+  --grey-300-color: rgb(128, 143, 158);
+
+  --local-blue-color: rgb(70, 218, 221);
+  --local-green-color: rgb(133, 225, 76);
+  --local-red-color: rgb(211, 49, 52);
+  --local-pink-color: rgb(255, 82, 82);
+  --local-pink-color-opacity: 255, 82, 82;
+  --local-yellow-color: rgb(245, 194, 56);
+
+  --main-text-color: rgb(39, 51, 63);
+  --main-text-low-color: rgb(128, 143, 158);
+
+  --main-font-family: Raleway, sans-serif;
+  --main-font-weight: 500;
+  --heading-font-family: 'RF Krabuler', sans-serif;
+
+  --small-box-shadow: 0 0 12px;
+  --padding-gap: clamp(24px, 4.8vi, 48px);
+  --section-gap: clamp(30px, 6vi, 60px);
 }

@@ -1,0 +1,25 @@
+.icon {
+  &::before {
+    content: '';
+    background-color: #fff;
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+  }
+
+  &_type_phone::before {
+    mask-image: url('../../images/icons.svg#phone');
+    background-color: var(--local-green-color);
+  }
+  &_type_telegram::before {
+    mask-image: url('../../images/icons.svg#telegram');
+    background-color: var(--local-blue-color);
+  }
+  &_type_vkontakte::before {
+    mask-image: url('../../images/icons.svg#vkontacte');
+    background-color: var(--main-color);
+  }
+}
