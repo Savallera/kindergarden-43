@@ -1,8 +1,8 @@
 :root {
   --main-color: #32618f;
-  --main-opacity-color: 50, 97, 143;
+  --main-color-opacity: 50, 97, 143;
   --accent-color: #f57b1f;
-  --accent-opacity-color: 245, 123, 31;
+  --accent-color-opacity: 245, 123, 31;
 
   --grey-100-color: rgb(224, 230, 235);
   --grey-200-color: rgb(191, 202, 212);
@@ -10,8 +10,9 @@
 
   --local-blue-color: rgb(70, 218, 221);
   --local-green-color: rgb(133, 225, 76);
-  --local-red-color: rgb(211, 49, 52);
-  --local-pink-color: rgb(255, 82, 82);
+  --local-red-color: #d33134;
+  --local-red-color-opacity: 211, 49, 52;
+  --local-pink-color: #ff5252;
   --local-pink-color-opacity: 255, 82, 82;
   --local-yellow-color: rgb(245, 194, 56);
 

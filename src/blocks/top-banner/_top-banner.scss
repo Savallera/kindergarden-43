@@ -1,12 +1,6 @@
 .top-banner {
   background-color: rgba(var(--local-pink-color-opacity), 0.1);
 
-  &__wrap {
-    max-inline-size: var(--main-block-size);
-    padding-block: var(--section-gap);
-    margin-inline: auto;
-  }
-
   &__columns {
     display: grid;
     gap: var(--padding-gap);

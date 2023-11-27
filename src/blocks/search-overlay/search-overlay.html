@@ -1,0 +1,41 @@
+<div class="search-overlay">
+  <div class="page__wrap search-overlay__wrap">
+    <button
+      type="button"
+      class="search-overlay__close-button icon icon_type_close"
+    ></button>
+    <form class="search-overlay__form" name="search">
+      <div class="field">
+        <label class="field__label" for="main-search">Поиск по сайту</label>
+        <div class="field__inner">
+          <input
+            class="field__input"
+            type="search"
+            id="main-search"
+            name="search"
+            placeholder="Опишите здесь все, что Вас интересует"
+          />
+        </div>
+      </div>
+      <button type="submit" class="button button_theme_outline-accent">
+        <span class="button__text">Найти</span>
+        <span class="button__icon icon icon_type_arrow-next"></span>
+      </button>
+    </form>
+  </div>
+</div>
+<script>
+  const searchButton = document.querySelector('.header__search-button');
+  const searchCloseOverlayButton = document.querySelector(
+    '.search-overlay__close-button'
+  );
+  const searchOverlay = document.querySelector('.search-overlay');
+  const openSearchOverlay = () => {
+    searchOverlay.classList.add('search-overlay_opened');
+  };
+  const closeSearchOverlay = () => {
+    searchOverlay.classList.remove('search-overlay_opened');
+  };
+  searchButton.addEventListener('click', openSearchOverlay);
+  searchCloseOverlayButton.addEventListener('click', closeSearchOverlay);
+</script>

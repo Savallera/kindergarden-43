@@ -27,9 +27,17 @@
     max-inline-size: 1.5em;
     inline-size: 1.5em;
     block-size: 1.5em;
+
+    &::before {
+      transition: transform 0.2s ease-in;
+    }
   }
 
-  // &:hover {}
+  &:hover {
+    .button__icon::before {
+      transform: translateX(-5%) scale(1.1);
+    }
+  }
 
   &:active {
     transform: translateY(1px);
@@ -44,6 +52,20 @@
   }
 
   &_theme_outline {
+    &-accent {
+      color: var(--accent-color);
+      &:hover {
+        background-color: var(--accent-color);
+        color: rgba(white, 0.9);
+      }
+    }
+    &-main {
+      color: var(--main-color);
+      &:hover {
+        background-color: var(--main-color);
+        color: rgba(white, 0.9);
+      }
+    }
     &-pink {
       color: var(--local-pink-color);
 
@@ -51,10 +73,6 @@
         background-color: var(--local-pink-color);
         color: rgba(white, 0.9);
       }
-    }
-
-    &-accent {
-      color: var(--accent-color);
     }
   }
 
@@ -65,41 +83,69 @@
       border-color: var(--accent-color);
 
       &:hover {
-        background-color: rgba(var(--accent-opacity-color), 0.75);
+        background-color: rgba(var(--accent-color-opacity), 0.75);
       }
     }
   }
 
-  // стрелочка далее
-  &_content_icon-arrow-next {
-    padding-inline-end: 0;
+  &_theme_text {
+    &-main {
+      background-color: transparent;
+      color: var(--main-color);
+      border-color: transparent;
 
-    &:hover .button__icon::before {
-      animation:
-        MoveRightInitial 0.2s forwards,
-        MoveRightEnd 0.4s forwards 0.2s;
+      &:hover {
+        background-color: rgba(var(--main-color-opacity), 0.25);
+      }
+    }
+    &-red {
+      background-color: transparent;
+      color: var(--local-red-color);
+      border-color: transparent;
+
+      &:hover {
+        background-color: rgba(var(--local-red-color-opacity), 0.25);
+      }
+    }
+  }
+
+  &_content {
+    &_only-icon {
+      min-inline-size: unset;
+      padding: 10px;
     }
 
-    .button__icon {
-      overflow: hidden;
-      inline-size: 2.75em;
-      min-inline-size: 2.75em;
-      max-inline-size: 2.75em;
+    // стрелочка далее
+    &_icon-arrow-next {
+      padding-inline-end: 0;
 
-      &::before {
-        inline-size: 1.5em;
+      &:hover .button__icon::before {
+        animation:
+          move-right-initial 0.2s forwards,
+          move-right-end 0.4s forwards 0.2s;
+      }
+
+      .button__icon {
+        overflow: hidden;
+        inline-size: 2.75em;
+        min-inline-size: 2.75em;
+        max-inline-size: 2.75em;
+
+        &::before {
+          inline-size: 1.5em;
+        }
       }
     }
   }
 }
 
-@keyframes MoveRightInitial {
+@keyframes move-right-initial {
   to {
     transform: translate3d(250%, 0, 0);
   }
 }
 
-@keyframes MoveRightEnd {
+@keyframes move-right-end {
   from {
     transform: translate3d(-150%, 0, 0);
   }

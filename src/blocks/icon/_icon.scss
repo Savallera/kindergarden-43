@@ -10,19 +10,27 @@
     mask-size: contain;
   }
 
-  &_type_phone::before {
-    mask-image: url('../../images/icons.svg#phone');
-    background-color: var(--local-green-color);
-  }
-  &_type_telegram::before {
-    mask-image: url('../../images/icons.svg#telegram');
-    background-color: var(--local-blue-color);
-  }
-  &_type_vkontakte::before {
-    mask-image: url('../../images/icons.svg#vkontacte');
-    background-color: var(--main-color);
-  }
-  &_type_arrow-next::before {
-    mask-image: url('../../images/icons.svg#arrow-next');
+  &_type {
+    &_arrow-next::before {
+      mask-image: url('../../images/icons.svg#arrow-next');
+    }
+    &_close::before {
+      mask-image: url('../../images/icons.svg#close');
+    }
+    &_phone::before {
+      mask-image: url('../../images/icons.svg#phone');
+      background-color: var(--local-green-color);
+    }
+    &_search::before {
+      mask-image: url('../../images/icons.svg#search');
+    }
+    &_telegram::before {
+      mask-image: url('../../images/icons.svg#telegram');
+      background-color: var(--local-blue-color);
+    }
+    &_vkontakte::before {
+      mask-image: url('../../images/icons.svg#vkontacte');
+      background-color: var(--main-color);
+    }
   }
 }
