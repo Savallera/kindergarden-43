@@ -1,6 +1,8 @@
 :root {
-  --main-color: rgb(50, 97, 143);
-  --accent-color: rgb(245, 123, 31);
+  --main-color: #32618f;
+  --main-opacity-color: 50, 97, 143;
+  --accent-color: #f57b1f;
+  --accent-opacity-color: 245, 123, 31;
 
   --grey-100-color: rgb(224, 230, 235);
   --grey-200-color: rgb(191, 202, 212);
@@ -21,6 +23,8 @@
   --heading-font-family: 'RF Krabuler', sans-serif;
 
   --small-box-shadow: 0 0 12px;
-  --padding-gap: clamp(24px, 4.8vi, 48px);
-  --section-gap: clamp(30px, 6vi, 60px);
+  --main-block-size: clamp(18.75rem, 4.75rem + 70vw, 88.75rem); // 1420
+  --wide-block-size: clamp(18.75rem, 1rem + 88.75vw, 107.5rem); // 1720
+  --section-gap: clamp(20px, 6vi, 60px); // vertical
+  --padding-gap: clamp(20px, 4.8vi, 48px);
 }

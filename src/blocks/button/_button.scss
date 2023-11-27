@@ -1,24 +1,32 @@
 .button {
-  display: block;
-  appearance: none;
   text-decoration: none;
-  border: 1px solid transparent;
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   min-block-size: 44px;
   min-inline-size: 200px;
-  padding: 10px 20px;
-  text-align: center;
+  padding: 8px 20px;
   font-size: inherit;
   font-weight: 600;
+  text-align: center;
+  border: 1px solid currentColor;
   background-color: transparent;
   border-radius: 22px;
-  transition:
-    background-color 0.3s ease-in,
-    color 0.3s ease-in,
-    border-color 0.3s ease-in;
+  transition: all 0.4s ease-in;
   cursor: pointer;
 
   &__text {
+    flex: auto;
     color: inherit;
+  }
+
+  &__icon {
+    flex: none;
+    min-inline-size: 1.5em;
+    max-inline-size: 1.5em;
+    inline-size: 1.5em;
+    block-size: 1.5em;
   }
 
   // &:hover {}
@@ -35,13 +43,68 @@
     outline: 2px solid var(--main-text-color);
   }
 
-  &_theme_accent {
-    background-color: var(--accent-color);
-    color: rgba(255, 255, 255, 0.95);
-    border-color: currentColor;
+  &_theme_outline {
+    &-pink {
+      color: var(--local-pink-color);
 
-    &:hover {
-      background-color: var(--local-pink-color);
+      &:hover {
+        background-color: var(--local-pink-color);
+        color: rgba(white, 0.9);
+      }
     }
+
+    &-accent {
+      color: var(--accent-color);
+    }
+  }
+
+  &_theme_fill {
+    &-accent {
+      background-color: var(--accent-color);
+      color: rgba(white, 0.9);
+      border-color: var(--accent-color);
+
+      &:hover {
+        background-color: rgba(var(--accent-opacity-color), 0.75);
+      }
+    }
+  }
+
+  // стрелочка далее
+  &_content_icon-arrow-next {
+    padding-inline-end: 0;
+
+    &:hover .button__icon::before {
+      animation:
+        MoveRightInitial 0.2s forwards,
+        MoveRightEnd 0.4s forwards 0.2s;
+    }
+
+    .button__icon {
+      overflow: hidden;
+      inline-size: 2.75em;
+      min-inline-size: 2.75em;
+      max-inline-size: 2.75em;
+
+      &::before {
+        inline-size: 1.5em;
+      }
+    }
+  }
+}
+
+@keyframes MoveRightInitial {
+  to {
+    transform: translate3d(250%, 0, 0);
+  }
+}
+
+@keyframes MoveRightEnd {
+  from {
+    transform: translate3d(-150%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
   }
 }

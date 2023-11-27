@@ -1,4 +1,38 @@
 .top-banner {
-  padding-block: var(--section-gap);
   background-color: rgba(var(--local-pink-color-opacity), 0.1);
+
+  &__wrap {
+    max-inline-size: var(--main-block-size);
+    padding-block: var(--section-gap);
+    margin-inline: auto;
+  }
+
+  &__columns {
+    display: grid;
+    gap: var(--padding-gap);
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__column {
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: clamp(1.5625rem, 1.375rem + 0.9375vw, 2.5rem);
+    color: var(--local-pink-color);
+  }
+
+  &__title {
+    margin: 0;
+    color: var(--main-color);
+    font-size: clamp(2.5rem, 1.875rem + 3.125vw, 5.625rem);
+    display: block;
+    font-family: var(--heading-font-family);
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  &__main-text {
+    font-size: clamp(1em, 1.25vi, 1.25em);
+  }
 }
