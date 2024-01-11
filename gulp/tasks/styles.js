@@ -19,7 +19,7 @@ const sass = gulpSass(dartSass);
 export default () => {
   return (
     gulp
-      .src(path.scss.src)
+      .src(path.styles.src)
       .pipe(
         plumber({
           errorHandler: notify.onError((error) => ({
@@ -39,11 +39,11 @@ export default () => {
         })
       )
       // .pipe(groupCssMediaQueries())
-      .pipe(gulp.dest(path.scss.dest))
+      .pipe(gulp.dest(path.styles.dest))
       // .pipe(rename({ suffix: ".min" }))
       // .pipe(size({ title: "До сжатия" }))
       // .pipe(csso())
       // .pipe(size({ title: "После сжатия" }))
-      .pipe(gulp.dest(path.scss.dest))
+      .pipe(gulp.dest(path.styles.dest))
   );
 };
